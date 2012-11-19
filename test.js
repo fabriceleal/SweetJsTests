@@ -2,7 +2,10 @@
 	A shortcut for the function keyword.
 */
 
-macro λ {	
+macro λ {
+	case $body => {
+		function () $body
+	}
 	case $params $body => {
 		function $params $body
 	}
@@ -164,7 +167,8 @@ function fif(Predicate){
 	}
 };
 
-var f2 = fif(λ () { return $a(0) == $a(1); }).fthen(5).felse(2);
+/* Look ma, I dont need '()' :D */
+var f2 = fif(λ { return $a(0) == $a(1); }).fthen(5).felse(2);
 
 console.log(f2(1, 2));
 
