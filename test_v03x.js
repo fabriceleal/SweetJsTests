@@ -1,6 +1,6 @@
 ﻿// UPDATE FOR v0.3.x
 
-// unable to use the λ, not sure if node-on-windows ou sweetjs problem
+// unable to use the λ, not sure if node-on-windows or sweetjs problem
 macro L {
 	rule {{ $body ...} } => {
 		function() {
